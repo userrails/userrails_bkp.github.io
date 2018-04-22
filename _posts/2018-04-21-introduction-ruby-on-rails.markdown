@@ -4,7 +4,8 @@ title:  "Introduction - Ruby on Rails!"
 date:   2018-04-21 09:23:58 +0545
 categories: tutorials
 ---
-Rails is a web development framework written in the Ruby programming language. It makes web application development more fun.
+Rails is a web development, model-view-controller framework written in the Ruby programming language. With the help of Rails framework, developer can easily and quickly develop small to large web applications.
+There are many biggest applications developed from Ruby on Rails, some examples are: [Github][Github], [ThemeForest][ThemeForest], [Groupon][Groupon], [Pixlr][Pixlr], [Shopify][Shopify], [Airbnb][Airbnb], etc
 
 Rails Design Principles:
 - MVC (Model, View, Controller)
@@ -30,3 +31,10 @@ Rails Design Principles:
 - Convention over Configuration
   
   This principle allows developer to use default logics and rules used by the framework so that application can be developed in very less time using very few lines of code. For example: if model `Customer` is generated then corressponding database table generated would be `Customers` unless developer configure another name.
+
+  [Github]: https://www.github.com
+  [ThemeForest]: https://themeforest.net
+  [Groupon]: https://groupon.com
+  [Pixlr]: https://pixlr.com
+  [Shopify]: https://shopify.com
+  [Airbnb]: https://airbnb.com
