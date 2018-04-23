@@ -4,7 +4,19 @@ title:  "Introduction - Ruby on Rails!"
 date:   2018-04-21 09:23:58 +0545
 categories: tutorials
 ---
-Rails is a web development, model-view-controller framework written in the Ruby programming language. With the help of Rails framework, developer can easily and quickly develop small to large web applications.
+Rails is a server-side web application development, model-view-controller framework written in the Ruby programming language. With the help of Ruby on Rails, developer can easily and quickly develop small to large web applications.
+
+Ruby on Rails is popular among other frameworks because:
+- Rails provides amazing tools like scaffolding, which helps in developing web applications in very less time.
+- Ruby on Rails is free as it is open source framework.
+- It is based on MVC (Model-View-Controller) pattern which is popular among web developers.
+- RubyGems are the libraries which are available publicly and well documented.
+- Ruby is easy to learn.
+- Rails supports integrated testing.
+- Saves money and time.
+- Code can be easily maintained.
+- Huge number of helping communities 
+
 There are many biggest applications developed from Ruby on Rails like [Github][Github], [ThemeForest][ThemeForest], [Groupon][Groupon], [Pixlr][Pixlr], [Shopify][Shopify], [Airbnb][Airbnb], etc
 
 Rails Design Principles:
