@@ -4,11 +4,11 @@ title:  "Introduction - Ruby on Rails!"
 date:   2018-04-21 09:23:58 +0545
 categories: tutorials
 ---
-Rails is a server-side web application development, model-view-controller framework written in the Ruby programming language. With the help of Ruby on Rails, developer can easily and quickly develop small to large web applications.
+Rails is a server-side web application development framework written in the Ruby programming language. Ruby on Rails help developer to write small to large web applications quickly.
 
 Ruby on Rails is popular among other frameworks because:
 - Rails provides amazing tools like scaffolding, which helps in developing web applications in very less time.
-- Ruby on Rails is free as it is open source framework.
+- Ruby on Rails is 100% free as it is open source framework.
 - It is based on MVC (Model-View-Controller) pattern which is popular among web developers.
 - RubyGems are the libraries which are available publicly and well documented.
 - Ruby is easy to learn.
@@ -33,10 +33,12 @@ Rails Design Principles:
   View
 
   View layer is the presentation layer which is used to return relevant HTML to be rendered on the users browser.
+  ActionView is the View in Rails MVC which is a part of ActionPack library. 
 
   Controller
 
-  The controller interacts with the model to retrieve and store data. The retrived data from model will pass to the view. The view returns the resulting HTML to the controller and the controller send this back to the users browser. 
+  The controller interacts with the model to retrieve and store data. The retrived data from model will pass to the view. The view returns the resulting HTML to the controller and the controller send this back to the users browser.
+  ActionController is the controller in MVC which handles browser request and acts as channel between Model and View. This is a part of ActionPack library.
 
 - DRY - Don't Repeat Yourself
   
@@ -44,8 +46,9 @@ Rails Design Principles:
 
 - Convention over Configuration
   
-  This principle allows developer to use default logics and rules used by the framework so that application can be developed in very less time using very few lines of code. For example: if model `Customer` is generated then corressponding database table generated would be `Customers` unless developer configure another name.
-
+  This principle allows developer to use default logics and rules used by the framework so that application can be developed in very less time using very few lines of code.
+  For example: `rails g Article` command will create an Article class and articles table unless developer configure another name. So this convention of framework configuration helps in Rapid application development.
+  
   [Github]: https://www.github.com
   [ThemeForest]: https://themeforest.net
   [Groupon]: https://groupon.com
