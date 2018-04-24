@@ -48,7 +48,11 @@ Rails Design Principles:
   
   This principle allows developer to use default logics and rules used by the framework so that application can be developed in very less time using very few lines of code.
   For example: `rails g Article` command will create an Article class and articles table unless developer configure another name. So this convention of framework configuration helps in Rapid application development.
-  
+
+Rails Web MVC Architecture
+
+ ![Web MVC Architecture]({{ "../assets/rails-mvc.jpg" | absolute_url }})
+
   [Github]: https://www.github.com
   [ThemeForest]: https://themeforest.net
   [Groupon]: https://groupon.com
