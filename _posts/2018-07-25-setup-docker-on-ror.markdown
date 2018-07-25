@@ -21,3 +21,7 @@ docker ps # to see all the processes
 docker-compose stop # to stop all the processes, so instead of killing all the container and processes you can run it and later on you can restart again
 
 docker-compose run --rm website rake db:create db:migrate # website is the services to run rails app
+
+sudo docker run -i -t <image/id> /bin/bash
+
+docker-compose run app rake db:migrate db:seed RAILS_ENV=production
