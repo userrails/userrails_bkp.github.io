@@ -24,7 +24,7 @@ docker-compose run --rm website rake db:create db:migrate # website is the servi
 
 sudo docker run -i -t <image/id> /bin/bash
 
-docker-compose run app rake db:migrate db:seed RAILS_ENV=production
+docker-compose run website rake db:migrate db:seed RAILS_ENV=production
 
 docker rmi 24a77bfbb9ee -f #forcefully remove image
 
