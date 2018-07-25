@@ -28,3 +28,6 @@ docker-compose run app rake db:migrate db:seed RAILS_ENV=production
 
 docker rmi 24a77bfbb9ee -f #forcefully remove image
 
+# remove all the containers
+docker rm $(docker ps -a -q)
+
