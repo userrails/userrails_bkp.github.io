@@ -31,3 +31,5 @@ docker rmi 24a77bfbb9ee -f #forcefully remove image
 # remove all the containers
 docker rm $(docker ps -a -q)
 
+Note: If you don’t have Docker running on your local machine, you need to replace localhost in the above URL with the IP address of the machine Docker is running on. If you’re using Docker Machine, you can run docker-machine ip “${DOCKER_MACHINE_NAME}” to find out the IP.
+
