@@ -5,6 +5,8 @@ date:   2018-07-25 09:23:58 +0545
 categories: tutorials
 ---
 
+First you need to install docker, docker-compose, docker-machine, on your system.
+
 # We need following files initially
  
  # install scripts
