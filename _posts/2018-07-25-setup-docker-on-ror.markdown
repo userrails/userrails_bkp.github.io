@@ -33,6 +33,7 @@ docker-compose stop
 
  # website is the name of the service to run rails app
 docker-compose run --rm website rake db:create db:migrate
+
 docker-compose run website rake db:migrate db:seed RAILS_ENV=production
 
 # enter into bash shell
