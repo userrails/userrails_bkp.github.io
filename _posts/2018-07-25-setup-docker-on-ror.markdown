@@ -6,10 +6,15 @@ categories: tutorials
 ---
 
 # We need following files initially
- dockerfile # install scripts
- .dockerignore # ignore while pushing the code
- .env # list env vars
-  docker-compose.yml # run the processes, containers and apps
+ 
+ # install scripts
+ dockerfile
+ # ignore while pushing the code
+ .dockerignore
+ # list env vars
+ .env
+ # run the processes, containers and apps
+ docker-compose.yml
 
 # Run the services and processes
 docker-compose up 
