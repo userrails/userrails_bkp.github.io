@@ -5,11 +5,11 @@ date:   2018-07-25 09:23:58 +0545
 categories: tutorials
 ---
 
-Some file required are:
-dockerfile # install scripts
-.dockerignore # ignore while pushing the code
-.env # list env vars
-docker-compose.yml # run the processes, containers and apps
+# We need following files initially
+ dockerfile # install scripts
+ .dockerignore # ignore while pushing the code
+ .env # list env vars
+  docker-compose.yml # run the processes, containers and apps
 
 Some useful commands:
 docker-compose up # install 
