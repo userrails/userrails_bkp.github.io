@@ -11,27 +11,36 @@ categories: tutorials
  .env # list env vars
   docker-compose.yml # run the processes, containers and apps
 
-Some useful commands:
-docker-compose up # install 
-docker-compose --build # build 
+# Run the services and processes
+docker-compose up 
 
-docker container ls # to see container list
-docker ps # to see all the processes
+# Build dependencies
+docker-compose --build 
 
-docker-compose stop # to stop all the processes, so instead of killing all the container and processes you can run it and later on you can restart again
+ # to see container list
+docker container ls
 
-docker-compose run --rm website rake db:create db:migrate # website is the services to run rails app
+ # to see all the processes
+docker ps
 
-sudo docker run -i -t <image/id> /bin/bash
+ # to stop all the processes, so instead of killing all the container and processes, later on you can restart again
+docker-compose stop
 
+ # website is the name of the service to run rails app
+docker-compose run --rm website rake db:create db:migrate
 docker-compose run website rake db:migrate db:seed RAILS_ENV=production
 
-docker rmi 24a77bfbb9ee -f #forcefully remove image
+# enter into bash shell
+sudo docker run -i -t <image/id> /bin/bash
+
+# forcefully remove image
+docker rmi 24a77bfbb9ee -f
 
 # remove all the containers
 docker rm $(docker ps -a -q)
 
-Note: If you don’t have Docker running on your local machine, you need to replace localhost in the above URL with the IP address of the machine Docker is running on. If you’re using Docker Machine, you can run docker-machine ip “${DOCKER_MACHINE_NAME}” to find out the IP.
+# Note: If you don’t have Docker running on your local machine, you need to replace localhost in the above URL with the IP address of the machine Docker is running on. If you’re using Docker Machine, you can run below cmd to find out the IP.
+docker-machine ip “${DOCKER_MACHINE_NAME}”
 
 # To run rails console
 docker-compose exec website rails console
