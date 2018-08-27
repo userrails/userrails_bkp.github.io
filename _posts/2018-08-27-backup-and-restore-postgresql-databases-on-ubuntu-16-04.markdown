@@ -7,6 +7,15 @@
 ```
 
 ### Restore Database
+
+##### Backup file created can be useful to restore your system.
+##### To restore it is essential to create a empty database and then you can restore database using following command:
+```
+ psql new_Database_name < path_to_backup_file
+```
+
+##### Here is the full script to restore the single database
+
 ```
  sudo su - postgres
  postgres@usr-Aspire-E5-575G:~$ psql
