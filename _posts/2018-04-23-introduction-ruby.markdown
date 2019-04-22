@@ -18,7 +18,6 @@ Ruby is a dynamic, open source, server-side scripting, interpreted, reflective, 
 * Ruby can be used for the development of Internet and Intranet applications.
 * Ruby supports many GUI tools such as Tcl/Tk, GTK, OpenGL.
 * Ruby can easily connect to DB2, MySQL, Oracle, Sybase.
-* 
 
 ##### Compile Ruby program
 Create a file hello_world.rb and write below code in it
@@ -39,5 +38,3 @@ Hello World !!
 Hello, world !!
 => nil
 ```
-
-### Features of Ruby
