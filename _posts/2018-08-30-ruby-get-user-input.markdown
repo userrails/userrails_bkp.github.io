@@ -17,4 +17,4 @@ name = gets.chomp
 puts "How are you #{name}"
 ```
 
-Stromg#chomp method returns string without the terminating newline.
+String#chomp method returns string after removing extra line.
