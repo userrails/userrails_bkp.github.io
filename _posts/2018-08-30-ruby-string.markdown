@@ -140,6 +140,13 @@ arr.join("-")
  => "s-t-r-i-n-g"
 ```
 
+#### Count specific characters
+
+```
+"lophophorous".count("o")
+=> 4
+```
+
  #### Convert string to integer
 ```
 "str".to_i
@@ -186,4 +193,51 @@ String Case
 => "HELLO"
 "HELLO".downcase
 => "hello"
+```
+
+Multiline Strings
+
+```
+b = <<-STRING
+hello
+world
+STRING
+
+a = %Q(hello
+world
+)
+ => "hello\nworld\n"
+```
+
+Gsub() replace text
+
+```
+str = "The color of car is red"
+str.gsub("red", "blue")
+=> "The color of car is blue"
+
+str = "helloooo"
+str.gsub("o", '')
+=> "hell"
+
+str = "my id is 5"
+str.gsub(/\d+/, '1001')
+=> "my id is 1001" 
+str.gsub(/\w+/) {|w| w.capitalize}
+ => "My Id Is 5"
+```
+
+#### Remove last character of a string
+```
+"hello".chomp("o")
+=> hell
+```
+
+#### Change string encodings
+
+```
+"string".encoding
+ => #<Encoding:UTF-8>
+
+"string".force_encoding("UTF-8")
 ```
