@@ -33,4 +33,13 @@ hash_var = {name: 'Car', color: 'Red', model: '2018'}
 hash_var.each do |key, value|
   puts "#{key} => #{value}"
 end
+
+# find index in loop using each_with_index
+
+[10, 11, 12].each_with_index do |val, key|
+  p key
+end
+=> 0
+   1
+   2
 ```
