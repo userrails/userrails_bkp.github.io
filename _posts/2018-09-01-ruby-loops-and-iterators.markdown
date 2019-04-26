@@ -103,3 +103,13 @@ end
   puts i
 end
 ```
+
+# stop a loop early using break
+
+```
+arr = [2,4,6,8,10,12]
+arr.each do |el|
+  break if el > 10
+  puts el
+end
+```
