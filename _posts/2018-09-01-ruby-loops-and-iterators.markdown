@@ -19,6 +19,27 @@ while count < 5 do
 end
 ```
 
+#### do while loop
+
+```
+# syntax
+
+loop do
+  # some code here
+  break if <condition>
+end
+
+# Example
+
+i = 1
+while true
+  puts i
+  i = i + 1
+  break if i > 5
+end
+
+```
+
 
 #### for loop
 for loop is used to run block of code in a specific number of times when number of needed iterations is known.
