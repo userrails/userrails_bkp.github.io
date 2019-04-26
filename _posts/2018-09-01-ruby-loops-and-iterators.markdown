@@ -7,6 +7,19 @@ categories: tutorials
 
 Loop is the process in which set of instructions or block of codes are repeated in a specified number of times under certain condition is satisfied. for, while, do while are example of loops.
 
+#### while loop
+Ruby while loop is used to execute a program until condition is true, once condition fails execution is terminated from loop. While loop is used when number of needed iterations is not fixed.
+
+```
+count = 0
+
+while count < 5 do
+  p count
+  count = count+1
+end
+```
+
+
 #### for loop
 for loop is used to run block of code in a specific number of times when number of needed iterations is known.
 
@@ -16,6 +29,7 @@ for num in 1..100
 end 
 ```
 
+#### Range loop
 Ruby each method is used to iterator over individual item in an array.
 
 ```
@@ -42,4 +56,10 @@ end
 => 0
    1
    2
+```
+
+#### Times loop
+
+```
+5.times {|i| puts "number #{i}"}
 ```
