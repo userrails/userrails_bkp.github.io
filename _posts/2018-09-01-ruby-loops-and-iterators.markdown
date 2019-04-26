@@ -38,6 +38,13 @@ while true
   break if i > 5
 end
 
+i = 1
+loop do
+  puts i
+  i = i + 1
+  break if i > 5
+end
+
 ```
 
 
