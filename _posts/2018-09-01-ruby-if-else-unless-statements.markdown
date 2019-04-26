@@ -29,3 +29,12 @@ unless num == 9
   puts "Selected number is not 10"
 end
 ```
+
+#### Ternary Operator
+
+Ternary operator is short hand for if else expression. Two symbols ? : are used.
+
+```
+x = 2
+x > 5 ? 'Greater' : 'Smaller' 
+```
