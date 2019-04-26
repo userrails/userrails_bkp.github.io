@@ -91,3 +91,15 @@ end
 ```
 5.times {|i| puts "number #{i}"}
 ```
+
+
+# skip iterations with the next keyword
+
+```
+10.times do |i|
+  res = i % 2
+  next unless res==0
+
+  puts i
+end
+```
