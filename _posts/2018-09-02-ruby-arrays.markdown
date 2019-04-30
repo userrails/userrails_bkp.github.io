@@ -84,8 +84,21 @@ Adding Data to Array
 ```
 count << "six"
  => ["one", "two", "three", "four", "five", "six"]
+
 count.push("seven")
 => ["one", "two", "three", "four", "five", "six", "seven"]
+
+# insert first position of an array
+count.unshift("zero")
+=> ["zero", "one", "two", "three", "four", "five"]
+
+# insert at any position
+count.insert(5, "between 4 & 5")
+=> ["zero", "one", "two", "three", "four", "between 4 & 5", "five"]
+
+# insert multivalues once
+count.insert(3, 'bet 2-3 1', 'bet2-3 2', 'bet2-3 3')
+=> ["zero", "one", "two", "bet 2-3 1", "bet2-3 2", "bet2-3 3", "three", "four", "between 4 & 5", "five"]
 ```
 
 Adding Data to nested Array
