@@ -49,3 +49,51 @@ arr1.equal? arr2
 arr1.object_id = 11617600
 arr2.object_id = 11617600
 ```
+
+Word array create an array in which each entry is a single word.
+
+'''
+count  = %w{one two three four five}
+'''
+
+This is equivalent to
+
+```
+count = ["one", "two", "three", "four", "five"]
+```
+
+Nested Array: Array can contains other arrays
+
+```
+staffs_info = [
+  ["Ram", "0012", "Manager"],
+  ["Shyam", "0013", "HR Manager"],
+  ["Hari", "0014", "Receptionist"]
+]
+```
+
+Access value of nested array
+
+```
+staffs_info[0][1]
+=> "0012"
+```
+
+Adding Data to Array
+
+```
+count << "six"
+ => ["one", "two", "three", "four", "five", "six"]
+count.push("seven")
+=> ["one", "two", "three", "four", "five", "six", "seven"]
+```
+
+Adding Data to nested Array
+
+```
+staffs_info[0] << "Rs. 80,000"
+=> ["Ram", "0012", "Manager", "Rs. 80,000"]
+staffs_info
+=> [["Ram", "0012", "Manager", "Rs. 80,000"], ["Shyam", "0013", "HR Manager"], ["Hari", "0014", "Receptionist"]]
+```
+
