@@ -36,6 +36,19 @@ arr1[50] => nil
 arr1[-3] => 3
 arr1[0, 4] => [1,2,3,4] # 0 is the indexing value and 4 is 4 items including indexing value 0
 arr1[1..3] => [2,3,4]
+arr1.at(1) => 2
+arr1.fetch(4) => 5
+arr1.first => 1
+arr1.last => 5
+arr1.take(3)
+=> [1, 2, 3]
+arr1.drop(3)
+=> [4, 5]
+
+arr = [1,2,3,4,5]
+arr.count => 5
+arr.empty? # => false
+arr.include?(2) => true
 ```
 
 Check if two array objects are equal
