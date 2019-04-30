@@ -28,6 +28,16 @@ arr1 = Array.new([1,2,3,4,5])
 arr2 = [1,2,3,4,5]
 ```
 
+Accessing elementes
+
+```
+arr1[3] => 4
+arr1[50] => nil
+arr1[-3] => 3
+arr1[0, 4] => [1,2,3,4] # 0 is the indexing value and 4 is 4 items including indexing value 0
+arr1[1..3] => [2,3,4]
+```
+
 Check if two array objects are equal
 
 ```
@@ -72,7 +82,7 @@ staffs_info = [
 ]
 ```
 
-Access value of nested array
+Accessing value of nested array
 
 ```
 staffs_info[0][1]
