@@ -133,3 +133,125 @@ staffs_info
 => [["Ram", "0012", "Manager", "Rs. 80,000"], ["Shyam", "0013", "HR Manager"], ["Hari", "0014", "Receptionist"]]
 ```
 
+Array pop / Remove items from an array
+
+```
+arr = [1,2,3,4,5]
+arr.pop
+=> 5
+arr
+=> [1,2,3,4]
+
+# array.unshift(0) will add o to start of an array while array.shift will remove first element
+arr = [1,2,3,4,5]
+arr.shift 
+=> 1
+arr
+[2,3,4,5]
+
+# delete an item at particular index use delete_at(index_position)
+arr = [1,2,3,4,5]
+arr.delete_at(2)
+=> 3
+arr
+[1,2,4,5]
+
+# compact() is used to remove nil value from an array
+arr = [nil, 1, 2, 3, nil, 4, nil, 5]
+arr.compact
+[1,2,3,4,5]
+arr
+=> [nil, 1, 2, 3, nil, 4, nil, 5]
+arr.compact!
+=> [1,2,3,4,5]
+arr
+=> [1,2,3,4,5]
+
+arr = [1,1,2,2,3,3,4,4,5,6,7]
+arr.uniq
+=> [1, 2, 3, 4, 5, 6, 7]
+```
+
+Iterating over an Array
+
+```
+arr = [1,2,3,4,5]
+arr.each {|item| p item+10}
+=> it prints 11,12,13,14,15
+
+arr = [1,2,3,4,5]
+arr.reverse_each {|item| p item+10}
+=> it prints 15,14,13,12,11
+
+arr = [1,2,3,4,5]
+arr.map {|item| p item+10}
+=> it prints 11,12,13,14,15
+arr
+=> 1,2,3,4,5
+
+arr.map! {|item| p item+10}
+arr
+=> [11, 12, 13, 14, 15]
+
+```
+
+Selecting items from an Array
+
+Non-destructive Selection
+
+```
+arr = [1,2,3,4,5,6,7,8]
+arr.select {|a| a > 3}
+# => [4,5,6,7,8]
+arr.reject {|a| a < 3}
+# => [3,4,5,6,7,8]
+arr.drop_while {|a| a < 5}
+# => [5,6,7,8]
+arr
+=> [1,2,3,4,5,6,7,8] 
+```
+
+Destructive Selection
+
+Destructive methods are select! and reject!
+
+```
+arr.select! {|a| a > 3}
+=> [4, 5, 6, 7, 8]
+arr
+=> [4, 5, 6, 7, 8]
+
+
+> arr = [1,2,3,4,5,6,7,8]
+=> [1, 2, 3, 4, 5, 6, 7, 8] 
+> arr.delete_if { |a| a < 4 }
+=> [4, 5, 6, 7, 8] 
+> arr
+=> [4, 5, 6, 7, 8]
+
+arr = [1, 2, 3, 4, 5, 6, 7, 8]
+arr.keep_if { |a| a < 4 }
+[1,2,3]
+arr
+=> [1, 2, 3]
+```
+
+Public methods like &, |, &&, ||
+
+```
+a = [1, 2, 3, 4]
+b = [3, 4, 5, 6]
+
+a & b
+=> [3, 4]
+
+a | b
+=> [1, 2, 3, 4, 5, 6]
+
+a || b
+=> [1, 2, 3, 4]
+
+a && b
+=> [3, 4, 5, 6]
+
+```
