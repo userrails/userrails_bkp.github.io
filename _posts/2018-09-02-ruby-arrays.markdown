@@ -242,8 +242,10 @@ Public methods like &, |, &&, ||
 a = [1, 2, 3, 4]
 b = [3, 4, 5, 6]
 
+Set intersection:
 a & b
 => [3, 4]
+
 
 a | b
 => [1, 2, 3, 4, 5, 6]
@@ -254,4 +256,162 @@ a || b
 a && b
 => [3, 4, 5, 6]
 
+```
+
+Concatenating two arrays:
+
+```
+["a", "b"] + ["c", "d"]
+=> ["a", "b", "c", "d"]
+````
+
+Difference of arrays:
+```
+["a", "b", "c", "d", "e"] - ["c", "d"]
+=> ["a", "b", "e"]
+```
+
+Arrarys can be chained together and returns an array (arr << obj -> arr)
+
+```
+["a", "b"] << 10 << ["c", "d"]
+=> => ["a", "b", 10, ["c", "d"]]
+```
+
+array <=> another_array -> -1, 0, +1 or nil
+
+```
+a = [1,2]
+b = [3,4]
+a <=> b => -1
+
+a = [1, 2]
+b = [1, 2]
+a <=> b => 0
+
+ a = [1, 2, 3]
+ b = [1, 2]
+ a <=> b => 1
+
+ a = [1, 2, 3]
+ b = [1, 2, :v]
+ a<=>b => nil
+```
+
+arr == another_arr -> bool
+
+```
+[1,3] == [1,3] #=> true
+[1,3] == [1,3,4] #=> false
+```
+
+bsearch {|x| block} -> elm
+
+Binary search finds a value from this array which meets the given condition in O(log n) where n is the size of the array.
+
+```
+arr = [0,1,2,3,4,5]
+arr.bsearch {|x| x >= 2}
+=> 2
+```
+
+Clear an Array
+
+```
+arr = [1,2,3,4,5]
+arr.clear
+# => []
+
+a = [1,2,3,4,5]
+a.collect {|x| x.to_s+"!"}
+=> ["1!", "2!", "3!", "4!", "5!"]
+
+a.collect.with_index {|x,i| p i}
+=> [0, 1, 2, 3, 4]
+
+a.map.with_index {|x,i| p i}
+=> [0, 1, 2, 3, 4]
+```
+
+Combination
+
+```
+a = [1,2,3,4,5]
+a.combination(1).to_a
+#=> [[1], [2], [3], [4], [5]]
+a.combination(2).to_a
+=> [[1, 2], [1, 3], [1, 4], [1, 5], [2, 3], [2, 4], [2, 5], [3, 4], [3, 5], [4, 5]]
+a.combination(3).to_a
+=> [[1, 2, 3], [1, 2, 4], [1, 2, 5], [1, 3, 4], [1, 3, 5], [1, 4, 5], [2, 3, 4], [2, 3, 5], [2, 4, 5], [3, 4, 5]]
+```
+
+compact
+```
+[1,2,nil,'a','b',4].compact
+#=> [1,2,'a','b',4]
+```
+
+concat
+```
+[1,2].concat([5,6])
+#=> [1,2,5,6]
+```
+
+cycle
+Calls the given block for each element n times or forever if nil is given.
+Does nothing.
+```
+a=["a","b","c"]
+a.cycle {|x| puts x} # infinite loop
+a.cycle(2) {|x| puts x} # => a b c a b c 
+```
+
+Array fill
+
+```
+arr = [1,2,3]
+arr.fill('a')
+=> ["a", "a", "a"]
+```
+
+flatten
+
+```
+arr = [[1,2], 3,4,[5]]
+arr.flatten
+# => [1,2,3,4,5]
+```
+
+replace
+
+```
+arr = ['a', 'b']
+arr.replace([1,2])
+=> [1,2]
+```
+
+sort
+```
+a = [5,4,6,8]
+a.sort
+=> [4, 5, 6, 8]
+```
+
+Conversion
+
+```
+to_s => returns the string
+to_h => returns hash i.e. [key, value] pairs
+> [[1,:b], [2,:c]].to_h
+=> {1=>:b, 2=>:c}
+to_a => returns self
+to_ary => returns self
+```
+
+transpose matrix
+
+```
+a = [[1,2], [3,4], [5,6]]
+a.transpose
+=> [[1,3,5], [2,4,6]]
 ```
