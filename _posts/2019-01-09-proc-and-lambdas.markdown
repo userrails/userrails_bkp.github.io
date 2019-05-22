@@ -67,4 +67,5 @@ class Block
   obj.hello([1,10,15], &proc)
 end
 => Array
+26
 ```
