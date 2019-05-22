@@ -12,6 +12,7 @@ Senerio:
 Solutions:
 
 ```
+# Normally we do like this and is the best way in this situation
 validates :name, length: { minimum: 5, maximum: 15 },
                           allow_blank: true
 ```
