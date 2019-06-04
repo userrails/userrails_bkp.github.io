@@ -57,3 +57,14 @@ else
   echo "RVM project not found at: $PWD"
 fi
 ```
+
+When your host example.dev do not work, then you need to restart your application using prax:
+
+```
+# Go to home directory and cd into .prax
+cd .prax
+# Go to your application directory
+cd example.dev
+# for first time run the command `prax start`, later you can restart it
+prax restart
+```
