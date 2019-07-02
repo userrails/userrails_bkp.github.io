@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Lambdas and Proc"
+title:  "Blocks, Lambdas and Proc"
 date:   2019-01-07 08:01:18 +0545
 categories: tutorials
 ---
