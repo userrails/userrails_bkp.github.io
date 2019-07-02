@@ -69,3 +69,31 @@ end
 => Array
 26
 ```
+
+# Blocks
+
+Ruby blocks are anonymous functions are passed into methods. They are enclosed between {} brackets or in do/end statement.
+It accepts multiple arguments as |arg1, ..., argn|. Blocks are used with `each`.
+It allows to save code and use it later.
+
+```
+#### single line blocks
+[20,30,40].each {|n| puts n}
+# here code inside {} are block
+
+#### multi-line blocks
+[20,30,40].each do |n|
+  puts n
+end
+```
+
+### Ruby yield keyword
+yield is a keyword that calls and run the code inside the block
+
+```
+def block_fun
+  yield
+end
+
+block_fun { puts "Block is executing" }
+```
