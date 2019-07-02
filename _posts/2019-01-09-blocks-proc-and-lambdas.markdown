@@ -5,6 +5,8 @@ date:   2019-01-07 08:01:18 +0545
 categories: tutorials
 ---
 
+# Lambdas and Proc
+
 Lambdas and Proc are block executing statement.
 
 Lambdas and Proc both are object of Proc.
