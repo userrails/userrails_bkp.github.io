@@ -241,3 +241,20 @@ str.gsub(/\w+/) {|w| w.capitalize}
 
 "string".force_encoding("UTF-8")
 ```
+
+#### Find out number of occurrence of each character in a given string
+
+```
+str = "hello world"
+arr = str.split("")
+arr.uniq.each {|x| p "Count of #{x} = #{str.count(x)}" if x != " "
+
+output:
+"Count of h = 1"
+"Count of e = 1"
+"Count of l = 3"
+"Count of o = 2"
+"Count of w = 1"
+"Count of r = 1"
+"Count of d = 1"
+```
