@@ -82,3 +82,25 @@ end
 cat = Cat.new
 cat.eat        # => "Animal - cat - eats milk and water."
 ```
+
+#### Module Mixins in Ruby
+
+Modules are a way of grouping together methods, classes, and constants. Modules provide a namespace and prevent name clashes, and it implement the mixin facility. Mixins is like multiple inheritence. 
+
+```
+module ModuleName
+    def module_method
+        puts "I am a module method"
+    end
+end
+
+class ClassName
+    include ModuleName
+end
+```
+
+```
+obj = ClassName.new
+obj.module_method
+# => I am a module method
+```
