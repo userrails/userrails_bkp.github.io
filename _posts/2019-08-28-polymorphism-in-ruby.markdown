@@ -2,6 +2,7 @@
 
 The term polymorphism means having many forms. In Ruby, polymorphism is carried out by using Inheritance. Polymorphism is achieved by using method overriding.
 
+```
 class Animal
     def eat # this method will overrides on other inherited classes
         puts "Animal eats grasses, water, milk, etc"
@@ -19,7 +20,9 @@ class Cow < Animal
         puts "Cow eats grasses & water"
     end
 end
+```
 
+```
 animal = Animal.new
 animal.eat
 => Animal eats grasses, water, milk, etc
@@ -31,3 +34,4 @@ animal.eat
 animal = Cow.new
 animal.eat
 => Cow eats grasses & water
+```
