@@ -116,6 +116,8 @@ db.customers.insertMany(
 { "_id" : ObjectId("5d6cd0eb68f1285dc9559366"), "profile_name" : "customer name 4", "email" : "email12@example.com", "age" : 22, "tags" : [ "regular" ], "full_name" : { "first_name" : "firstname4", "mid_name" : "midname4", "last_name" : "last_name4" } }
 ```
 
+## Upsert Option (updateOne(), updateMany(), replaceOne())
+
 #### Replace a record except an ID field
 
 ```
@@ -170,3 +172,53 @@ The update action involves following operations:
 
 uses the $set operator to update the value of the size.uom field to "cm" and the value of the status field to "P",
 uses the $currentDate operator to update the value of the lastModified field to the current date. If lastModified field does not exist, $currentDate will create the field. See $currentDate for details.
+
+
+#### UpdateMany
+
+Update all the documents where age is greater than 22
+
+```
+db.customers.updateMany(
+    {
+        "age": { $gt: 22 }
+    },
+    {
+        $set: { "tags": "Multiple Update", active: "true" },
+        $currentDate: { lastModified: true }
+    }
+)
+```
+>> { "acknowledged" : true, "matchedCount" : 2, "modifiedCount" : 2 }
+
+Now it's time to check updated record:
+
+```
+> db.customers.find({"age": {$gt: 22}})
+{ "_id" : ObjectId("5d6ccdf9a82b6d69714cebec"), "profile_name" : "customer name 2 updated", "email" : "email2@example.com", "age" : 30, "tags" : "Multiple Update", "full_name" : { "first_name" : "firstname2", "mid_name" : "midname2", "last_name" : "last_name2 updated" }, "lastModified" : ISODate("2019-09-02T12:56:37.700Z"), "active" : "true" }
+{ "_id" : ObjectId("5d6ccdf9a82b6d69714cebed"), "profile_name" : "customer name 3", "email" : "email3@example.com", "age" : 36, "tags" : "Multiple Update", "full_name" : { "first_name" : "firstname3", "mid_name" : "midname3", "last_name" : "last_name3" }, "active" : "true", "lastModified" : ISODate("2019-09-02T12:56:37.700Z") }
+```
+
+#### Some other options:
+```
+db.collection.findOneAndReplace().
+db.collection.findOneAndUpdate().
+db.collection.findAndModify().
+db.collection.save().
+db.collection.bulkWrite()
+```
+
+#### Delete document (deleteOne(), deleteMany())
+
+Delete only one record no matter multiple records for this profile name exists
+```
+> db.customers.deleteOne({profile_name: 'profile name'})
+
+o/p => { "acknowledged" : true, "deletedCount" : 1 }
+```
+
+Delete many records at once
+```
+> db.customers.deleteMany({profile_name: 'profile name 1'})
+o/p => { "acknowledged" : true, "deletedCount" : 4 }
+```
