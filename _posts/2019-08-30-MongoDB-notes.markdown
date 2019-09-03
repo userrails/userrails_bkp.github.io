@@ -222,3 +222,93 @@ Delete many records at once
 > db.customers.deleteMany({profile_name: 'profile name 1'})
 o/p => { "acknowledged" : true, "deletedCount" : 4 }
 ```
+
+### Bulk Write with bulkWrite()
+
+```
+try {
+    db.customers.bulkWrite([
+        { insertOne: { "document": {
+                        profile_name: 'foo bar',
+                        email: 'foo@shivrajbadu.com.np',
+                        age: 29,
+                        tags: ["regular"],
+                        full_name: { first_name: 'shiv', mid_name: 'raj', last_name: 'badu' }
+                    }
+                }
+            },
+            { insertOne: { "document": {
+                    profile_name: 'foo baz',
+                    email: 'baz@shivrajbadu.com.np',
+                    age: 25,
+                    tags: ["regular"],
+                    full_name: { first_name: 'foo', mid_name: 'bar', last_name: 'baz' }
+                    }
+                }
+            },
+            { updateOne: {
+                    "filter" : { email: 'email10@example.com' },
+                    "update" : { $set: {"profile_name": 'new name', tags: ["irregular"], "full_name.first_name": "fn", "full_name.mid_name": "mn", "full_name.last_name": "ln" } }
+                }
+            },
+            { deleteOne: {
+                    "filter": { profile_name: 'customer name' }
+                }
+            },
+            { replaceOne: { 
+                "filter": { email: 'email@example.com' },
+                "replacement": { "profile_name": 'profile name', "email": 'email@example.com', "age": 14, "tags": ["irregular"], "full_name": { "first_name": "fn", "last_name": "ln", "mid_name": "mn" }  }
+             } }
+        ]);
+} catch (e) {
+    print(e);
+}
+```
+
+#### Text Search
+
+To perform text search use `text index` and $text operator, `text` indexes can include any field whose value is a string or an array of string elements. To perform text search queries, you must have a `text` index on your collection. A collection can only have one text search index, but that index can conver multiple fields.
+
+If index is not found you will get following error message:
+
+```
+Error: error: {
+	"ok" : 0,
+	"errmsg" : "text index required for $text query",
+	"code" : 27,
+	"codeName" : "IndexNotFound"
+}
+```
+So, you need to create Index first
+
+```
+db.customers.createIndex({
+    profile_name: "text",
+    email: "text"
+})
+```
+```
+db.customers.find({
+    $text: {
+        $search: "myemail@shivrajbadu.com.np"
+    }
+})
+```
+
+```
+db.customers.aggregate(
+    [
+        { $match: { $text: { $search: "first name" } } }
+    ]
+)
+```
+
+To get exact match result of searched text
+
+```
+db.customers.aggregate(
+    [
+        { $match: { $text: { $search: "\"customer name replaced\"" } } }
+    ]
+)
+```
