@@ -315,6 +315,7 @@ db.customers.aggregate(
 
 ### References
 
+```
 user document             contact document                            articles document
 -------------             -----------------                          -----------------
 {                         {                                            {
@@ -323,6 +324,7 @@ user document             contact document                            articles d
 }                             phone: '9852525252',                        title: 'first article',
                               email: 'contact@shivrajbadu.com.np'         body: 'article body'
                           }                                            }
+```
 
 ### One-to-One Relationships with Embedded Documents
 #### Contact document contains a reference to the User document. 
