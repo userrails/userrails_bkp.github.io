@@ -312,3 +312,84 @@ db.customers.aggregate(
     ]
 )
 ```
+
+### References
+
+user document             contact document                            articles document
+-------------             -----------------                          -----------------
+{                         {                                            {
+    _id: <ObjectId1>,        _id: <ObjectId2>,                            _id: <ObjectId3>,
+    username: 'xyz'           user_id: <ObjectId1>,                       user_id: <ObjectId1>,
+}                             phone: '9852525252',                        title: 'first article',
+                              email: 'contact@shivrajbadu.com.np'         body: 'article body'
+                          }                                            }
+
+### One-to-One Relationships with Embedded Documents
+#### Contact document contains a reference to the User document. 
+
+User Document
+```
+{
+    _id: "unique_id",
+    username: 'uniquename'
+}
+
+Contact Document
+```
+{
+    _id: "ObjectId("5d6df862e1b6226e35c6c519")",
+    _user_id: "unique_id",
+    phone: "8585858585",
+    email: "contact@shivrajbadu.com.np"
+}
+```
+
+### One-to-Many Relationships with Embedded Documents
+In the normalized data model, the articles documents contain a reference to the user document.
+
+User Document
+```
+{
+    _id: "unique_id",
+    username: 'uniquename'
+}
+
+Article Document
+```
+{
+    _id: "ObjectId("5d6df9b5e1b6226e35c6c522")",
+    _user_id: "unique_id",
+    title: "This is a title.",
+    body: "This is a description."
+}
+
+{
+    _id: "ObjectId("9e7df9b5e1b6226e35c6c435")",
+    _user_id: "unique_id",
+    title: "This is another title.",
+    body: "This is description for another title."
+}
+```
+
+When implement one to many relationships, many child records will have many child document records so multiple queries need to be issued to resolve the references, we can also use another solution to make single query as shown below:
+
+```
+{
+    _id: "unique_id",
+    username: 'uniquename',
+    articles: [
+        {
+            _id: "ObjectId("5d6df9b5e1b6226e35c6c522")",
+            _user_id: "unique_id",
+            title: "This is a title.",
+            body: "This is a description."
+        },
+        {
+            _id: "ObjectId("9e7df9b5e1b6226e35c6c435")",
+            _user_id: "unique_id",
+            title: "This is another title.",
+            body: "This is description for another title."
+        }
+    ]
+}
+```
