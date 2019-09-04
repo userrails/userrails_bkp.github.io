@@ -1,3 +1,43 @@
+#### Introduction to MongoDB
+
+MongoDB is a open source document-oriented NoSQL database used for high volume data storage. 
+If database is not already created switch to the database and insert data into it, this way database is created.
+Each record in a MongoDB collection is a document. MongoDB collections are like table and documents are like rows of the relational databases.
+
+## Create Database
+
+```
+use NewDatabase # switched to db NewDatabase
+db.products.insert({name: 'product', price: 20}) # Create a collection name as products with new document as a record
+```
+
+## View database and collections
+
+```
+> show dbs;
+
+admin
+config
+local
+NewDatabase
+
+> use NewDatabase
+
+switched to db NewDatabase
+
+> show collections
+
+products
+```
+
+## Delete Database
+
+```
+> db.dropDatabase()
+
+{ "dropped" : "NewDatabase", "ok" : 1 }
+```
+
 ## Crud operations
 
 ##### Insert a Single Document
