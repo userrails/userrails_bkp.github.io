@@ -24,7 +24,8 @@ twitter_username: shivrajbadu
 
 # Build settings
 markdown: kramdown
-theme: minima
+# theme: minima
+theme: jekyll-theme-leap-day
 plugins:
   - jekyll-feed
 
