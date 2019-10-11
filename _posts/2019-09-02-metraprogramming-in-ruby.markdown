@@ -145,6 +145,7 @@ A Work Around:
 
 To combat this issue, some developers choose to write a comment listing the defined method names above metaprogramming block. This simple solution can greatly help the readability of the code.
 
+```
 class User
     # has_password?, has_email?, has_first_name?, has_last_name? method definitions
     [
@@ -158,6 +159,7 @@ class User
         end
     end
 end
+```
 
 Performance
 
