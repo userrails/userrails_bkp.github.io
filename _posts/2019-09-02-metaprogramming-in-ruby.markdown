@@ -9,7 +9,7 @@ Metaprogramming includes :
 - Aspect-Oriented Thinking or Aspect Oriented Programming
 - DRY Thinking
 
-It is advisible to mastering Metaprogramming before using it as it is very powerful.
+It is advisable to mastering Metaprogramming before using it as it is very powerful.
 
 Examples
 
