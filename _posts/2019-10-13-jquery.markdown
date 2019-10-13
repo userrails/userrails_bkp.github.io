@@ -1,0 +1,61 @@
+---
+layout: post
+title:  "JQuery"
+date:   2019-01-07 08:01:18 +0545
+categories: jquery
+---
+
+# Introduction
+
+jQuery is a JavaScript library created by John Resig in 2006 with an objectives Write less, do more. The main features of jQuery are event handling, Ajax interactions, animations, traversing, DOM manipulation, Cross Browser Support,  etc.
+
+# Steps to install jQuery
+
+jQuery can be installed in two ways:
+
+1. Download jQuery library in your system and include in HTML code.
+    * Download latest version of jQuery into your project directory from https://jquery.com/download/
+    
+    Here is the example code
+
+```
+<html>
+    <head>
+        <title>jQuery</title>
+        <script type="text/javascript" src="/js/jquery-3.4.1.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                console.log("Hello jQuery");
+                document.write("Hello jQuery");
+            });
+        </script>
+    </head>
+    <body>
+        <p>jQuery</p>
+    </body>
+</html>
+```
+
+2. Include jQuery library in your HTML code from Content Delivery Network (CDN).
+
+Here is the example code
+
+```
+<html>
+    <head>
+        <title>jQuery</title>
+        <script type = "text/javascript" 
+         src = "https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+      </script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                console.log("Hello jQuery");
+                document.write("Hello jQuery");
+            });
+        </script>
+    </head>
+    <body>
+        <p>jQuery</p>
+    </body>
+</html>
+```
