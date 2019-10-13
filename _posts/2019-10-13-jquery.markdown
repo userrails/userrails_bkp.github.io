@@ -9,6 +9,40 @@ categories: jquery
 
 jQuery is a JavaScript library created by John Resig in 2006 with an objectives Write less, do more. The main features of jQuery are event handling, Ajax interactions, animations, traversing, DOM manipulation, Cross Browser Support,  etc.
 
+jQuery event should call inside $(document).ready() function in order to work on HTML page and script inside this function will exectuted before loaded the page contents and when DOM is loaded.
+
+```
+$(document).ready(function() {
+   // The script written here will execute when DOM is ready
+});
+```
+
+Example Usage
+
+```
+<html>
+    <head>
+        <title>jQuery Example</title>
+        <script type = "text/javascript" 
+         src = "https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+        </script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $("#header").click(function() {
+                    alert("jQuery triggered");
+                });
+            });
+        </script>
+    </head>
+
+    <body>
+      <div id="header">
+        Click Me
+      </div>
+    </body>
+</html>
+```
+
 # Steps to install jQuery
 
 jQuery can be installed in two ways:
