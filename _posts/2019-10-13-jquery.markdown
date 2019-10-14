@@ -9,6 +9,18 @@ categories: jquery
 
 jQuery is a JavaScript library created by John Resig in 2006 with an objectives Write less, do more. The main features of jQuery are event handling, Ajax interactions, animations, traversing, DOM manipulation, Cross Browser Support,  etc.
 
+# jQuery Syntax
+
+```
+$(selector).action()
+```
+Here $ sign is used to define jQuery, a selector is used to find HTML DOM elements and an action is jQuery function to be performed on the HTML elements.
+
+To hide current element use `$(this).hide()`
+To hide all h1 elements use `$("h1").hide()`
+To hide element with id "myDiv" use - `$("#myDiv").hide()`
+To hide element with class "myDiv" use - `$(".myDiv").hide()`
+
 jQuery event should call inside $(document).ready() function in order to work on HTML page and script inside this function will exectuted before loaded the page contents and when DOM is loaded.
 
 ```
