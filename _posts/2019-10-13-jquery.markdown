@@ -110,3 +110,6 @@ Here is the example code
 
 # jQuery Selectors
 
+jQuery Selectors are used to select HTML elements based on their name, id, classes, types, attributes, values to perform various tasks.
+
+jQuery selectors start with the factory function which starts with dollar sign followed by parentheses $() which is synonym of jQuery(). Sometime conflict occurs with $ sign when using other JavaScript library in that case use jQuery() instead of $() to avoid conflict.
