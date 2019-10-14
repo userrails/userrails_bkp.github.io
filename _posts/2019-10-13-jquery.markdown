@@ -16,10 +16,12 @@ $(selector).action()
 ```
 Here $ sign is used to define jQuery, a selector is used to find HTML DOM elements and an action is jQuery function to be performed on the HTML elements.
 
-To hide current element use `$(this).hide()`
-To hide all h1 elements use `$("h1").hide()`
-To hide element with id "myDiv" use - `$("#myDiv").hide()`
-To hide element with class "myDiv" use - `$(".myDiv").hide()`
+```
+`$(this).hide()` // To hide current element use
+`$("h1").hide()` // To hide all h1 elements use
+`$("#myDiv").hide()` // To hide element with id "myDiv" use
+`$(".myDiv").hide()` // To hide element with class "myDiv" use
+```
 
 jQuery event should call inside $(document).ready() function in order to work on HTML page and script inside this function will exectuted before loaded the page contents and when DOM is loaded.
 
