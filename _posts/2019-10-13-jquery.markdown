@@ -143,7 +143,7 @@ Here are few lists of jQuery selectors
 | **$("p ~ ul")** # Selects all elements matched by <ul> which is followed by <p>  |
 | **$("code, em, strong")** # Selects all elements which is matched by <code> or <em> or <strong>|
 | **$("p strong, .myDivClass")** # Select all <strong> elements which are followed by <p> and having class="myDivClass"|
-| **$(":empty")** # Select all elements having no children|
-| **$("p:empty")** # Select all paragraph elements having no children|
-| **$("div[p]")** # Select all elements having <div> which contains <p>|
+| **$(":empty")** # Select all elements having no children                         |
+| **$("p:empty")** # Select all paragraph elements having no children              |
+| **$("div[p]")** # Select all elements having <div> which contains <p>            |
 | **$("p[.myDivClass]")** # Select all paragraph elements having class="myDivClass"|
