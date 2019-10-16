@@ -118,7 +118,7 @@ Here are few lists of jQuery selectors
 
 | Selector                                                                       |
 |--------------------------------------------------------------------------------|
-| $("*") # Selects all element|
+| **$("*")** # Selects all element|
 | $(this) # Selects current element|
 | $("#myDivId") # Selects an element with an Id="myDivId"|
 | $("#myDivClass")  # Selects an element with class="myDivId"|
