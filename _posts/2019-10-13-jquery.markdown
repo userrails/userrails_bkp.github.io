@@ -147,3 +147,14 @@ Here are few lists of jQuery selectors
 | **$("p:empty")** # Select all paragraph elements having no children              |
 | **$("div[p]")** # Select all elements having <div> which contains <p>            |
 | **$("p[.myDivClass]")** # Select all paragraph elements having class="myDivClass"|
+|**$(":radio")** # Selects all the radio buttons in the form                       |
+|**$(":checked")** # Selects all the checkbox in the form                          |
+|**$(":input")** # Selects input element of the form like: input, textarea, select, button, etc|
+|**$(":text")** # Selects all input text elements                                  |
+|**$("p:lt(3)")** # Selects all first three elements                               |
+|**$("p:gt(2)")** # Selects all paragraph elements excluding first two or after third one|
+|**$("div/p")** # Selects all paragraph elements which are under div tag           |
+|**$("div//code")** # Selects all <code> elements which are descendants of <div>   |
+|**$("//p//a")** # Selects all links that are descendants of paragraph             |
+|**$(":parent")** # Selects all elements which are parent of another element, including text  |
+|**$("li:contains(second)")** # Selects all elements matched by <li> that contain the text second|
