@@ -173,6 +173,8 @@ jQuery attributes are almost uses with properties like `className`, `id`, `tagNa
 
 ## jQuery attr() methods
 
+attr() is used to get value of attributes and attr(name, value) is used to set the attribute with new value which will apply to all elements.
+
 ```
 <!DOCTYPE html>
 <html>
