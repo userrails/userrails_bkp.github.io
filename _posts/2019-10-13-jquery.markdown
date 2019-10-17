@@ -232,3 +232,16 @@ addClass(className) is used to apply defined styles to selected elements.
     </body>
 </html>
 ```
+
+Some more attr methods are:
+
+* removeAttr() - Removes an attribute of matched elements
+* removeClass(class) - Removes the class of matched elements
+* hasClass(class) - check if class present then returns true
+* toggleClass(class) - add the class if absent and remove the class if present 
+* html() - Get the html contents of an element
+* html(val) - set the html content with value of element
+* text() - get the combined text contents of elements
+* text(val) - set the text content of element
+* val() - get input value of first matched element
+* val(val) - set the value attribute of every matched element
