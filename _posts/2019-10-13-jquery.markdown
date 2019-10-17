@@ -171,3 +171,36 @@ text() - get or set the text for the specified target element.
 
 jQuery attributes are almost uses with properties like `className`, `id`, `tagName`, `href`, `title`, `src`, `rel`. HTML tags are the h1, h2, p, img, div, head, body, bold(b), anchor(a), form, hr, br, input, li, ul, ol, link, option, strong, small, table, td, tr, th, u, tt, center, etc.
 
+## jQuery attr() methods
+
+```
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js">
+	</script>
+	<script>
+		$(document).ready(function () {     
+			alert($("div").attr("style")); // Select div tag and get the value of style attributes
+            $("p").attr("class", "greenColorStyle"); // all paragraph tag's class will update to greenColorStyle
+            var title = $("p").attr("title"); // get value of paragraph's attributes title
+            $("#progTitle").text(title); // inspect div id progTitle and replace text defined by variable title
+		});
+	</script>
+   <style type="text/css">
+  	.greenColorStyle {
+      color: green;
+    }
+   </style>
+</head>
+<body>
+  <div style="color: red; ">This is a paragraph under div</div>
+  <p title="Programming Tutorials">Get value of title attributes and replace div having id progTitle</p>
+  <div>
+    <p>After page loads all paragraph should be in green color</p>
+    <p>Another text</p>
+  </div>
+  <div id="progTitle"></div>
+</body>
+</html>
+```
