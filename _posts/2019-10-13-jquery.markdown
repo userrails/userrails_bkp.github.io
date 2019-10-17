@@ -289,3 +289,188 @@ Collects one or more matched elements which are passed inside the method to crea
 </body>
 </html>
 ```
+
+* addBack()
+adds the previous set of elements with current set and maintains them in a stack which can be manipulated.
+
+```
+# add together paragraph tags with myDiv div tag and implement bgGreen color to both
+$("div.myDiv").find("p").addBack().addClass("bgGreen");
+```
+
+* not()
+get all elements which do not match specific selector
+
+
+#### Tree Traversing
+
+##### Descendants
+
+* children
+
+Get all the child elements of the selected element.
+
+```
+$(selector).children();
+```
+
+* find()
+
+Get all the specified child elements of each selected element.
+
+##### Ancestors
+
+* closest
+find the first ancestor of the selected selector.
+
+```
+$(selector).closest(selector or element);
+```
+
+* parent
+
+get the parent element of specified selector
+
+```
+$(selector).parent();
+```
+
+* parents
+
+get all ancestor elements of specified selector
+
+```
+$(selector).parents();
+```
+
+* parentsUntil()
+
+
+get all ancestor elements between specified selector and arguments.
+
+
+```
+$(selector).parentsUntil(selector, element)
+```
+
+* offsetParent()
+
+get the first parent element of specified selector.
+
+##### Siblings
+
+* siblings
+
+get all siblings of the specified selector.
+
+```
+$(selector).siblings()
+```
+
+* next()
+
+get next sibling element of the specified selector.
+
+```
+$(selector).next()
+```
+
+* nextAll()
+
+get all next sibling elements of the specified selector.
+
+```
+$(selector).nextAll()
+```
+
+* nextUntil()
+
+get all next sibling between specified selector and arguments.
+
+```
+$(selector).nextUntil()
+```
+
+* prev()
+
+get the previous sibling element of the specified selector.
+
+```
+$(selector).prev(selector)
+```
+
+* prevAll()
+
+get all the previous siblings of specified selector.
+
+```
+$(selector).prevAll(selector, filter_element)
+```
+
+* prevUntil()
+
+get all the previous siblings between specified selector and arguments.
+
+```
+$(selector).prevUntil(selector, filter_element)
+```
+
+##### filtering
+
+* first()
+
+get the first element of the specified selector
+
+* last()
+
+get the last element of the specified selector
+
+* eq()
+
+get the element with specified index number of the specified selector.
+
+```
+$(selector).eq(index)
+```
+
+* filter()
+
+remove or get the element which are matched with specified selector
+
+```
+$(selector).is(selector or function or elements)
+```
+
+* has()
+
+get all elements which have one or more elements within and are matched with specified selector.
+
+```
+$(selector).has(selector)
+```
+
+* is()
+
+it checks if one of the specified selector is matched with arguments.
+
+```
+.is(selector or function or elements)
+```
+
+* map()
+
+traverse arrays and objects and results a new array
+
+```
+jQuery.map(array, function(val, i) {
+    // do stuff here
+});
+```
+
+* slice(start, end)
+
+get the subset of specified selector based on it's argument index or start and stop value.
+
+```
+$(selector).slice(start, end)
+```
