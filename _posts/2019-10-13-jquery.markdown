@@ -158,3 +158,16 @@ Here are few lists of jQuery selectors
 |**$("//p//a")** # Selects all links that are descendants of paragraph             |
 |**$(":parent")** # Selects all elements which are parent of another element, including text  |
 |**$("li:contains(second)")** # Selects all elements matched by <li> that contain the text second|
+
+# jQuery attributes
+
+Some jQuery methods used to get or set the value of attributes, property, html, etc are postulated below:
+
+attr() - get or set the specified attribute of the target element.
+prop() - get or set the specified property of the target element.
+html() - get or set the html content to the specified target element.
+val() - get or set the value of the specified target element.
+text() - get or set the text for the specified target element.
+
+jQuery attributes are almost uses with properties like `className`, `id`, `tagName`, `href`, `title`, `src`, `rel`. HTML tags are the h1, h2, p, img, div, head, body, bold(b), anchor(a), form, hr, br, input, li, ul, ol, link, option, strong, small, table, td, tr, th, u, tt, center, etc.
+
