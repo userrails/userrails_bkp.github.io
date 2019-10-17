@@ -235,13 +235,57 @@ addClass(className) is used to apply defined styles to selected elements.
 
 Some more attr methods are:
 
-* removeAttr() - Removes an attribute of matched elements
-* removeClass(class) - Removes the class of matched elements
-* hasClass(class) - check if class present then returns true
-* toggleClass(class) - add the class if absent and remove the class if present 
-* html() - Get the html contents of an element
-* html(val) - set the html content with value of element
-* text() - get the combined text contents of elements
-* text(val) - set the text content of element
-* val() - get input value of first matched element
-* val(val) - set the value attribute of every matched element
+* removeAttr()
+    Removes an attribute of matched elements
+* removeClass(class)
+    Removes the class of matched elements
+* hasClass(class) 
+    check if class present then returns true
+* toggleClass(class)
+    add the class if absent and remove the class if present 
+* html() 
+    Get the html contents of an element
+* html(val) 
+    set the html content with value of element
+* text() 
+    get the combined text contents of elements
+* text(val) 
+    set the text content of element
+* val() 
+    get input value of first matched element
+* val(val) 
+    set the value attribute of every matched element
+
+# jQuery Traversing
+
+jQuery traversing is used to find html elements based on their relation to other elements.
+jQuery traversing means to move over elements to find a particular or entire element.
+
+Here are some list of jQuery traversing methods:
+
+* add()
+Collects one or more matched elements which are passed inside the method to create an object which can be manipulated at the same time.
+
+```
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js">
+	</script>
+	<script>
+		$(document).ready(function () {     
+		  var jqObj = $('div').add('p').add('span').css( "background", "yellow" );
+		  jqObj.addClass('greenColorStyle');
+		});
+	</script>
+   <style type="text/css">
+  	.greenColorStyle {
+      color: green;
+    }
+   </style>
+</head>
+<body>
+  <div id="myDiv" style="text-align: center; padding: 20px">This is a paragraph under div</div>
+  <p>Some more text</p>
+</body>
+</html>
+```
