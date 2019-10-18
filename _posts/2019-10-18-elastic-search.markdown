@@ -109,7 +109,6 @@ curl -X GET "localhost:9200/"
 
 # it's output is as shown below
 
-```
 {
   "name" : "crystal-Aspire-E5-575G",
   "cluster_name" : "elasticsearch",
@@ -172,7 +171,7 @@ Check firewall status
 ```
 sudo ufw status
 
-# o/p looks like this
+// o/p looks like this
 
 Status: active
 
@@ -188,6 +187,7 @@ To                         Action      From
 ```
 sudo vim /etc/elasticsearch/elasticsearch.yml
 ```
+
 Uncomment line having `network.host`, change the value to 0.0.0.0. To make Elasticsearch listen on specified interface among multiple network interfaces on your machine you can specify interface IP address.
 
 Restart the Elasticsearch service and now connection to Elasticsearch server from remote is ready.
