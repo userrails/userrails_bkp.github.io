@@ -141,7 +141,7 @@ data storage - /var/lib/elasticsearch
 configuration file - /etc/elasticsearch
 Java startup options configuration - /etc/default/elasticsearch
 
-##### Remote Access Setup
+#### Remote Access Setup
 
 Elasticsearch by default listen to localhost, so if database also in the same host, it is single node cluster and default configuration works.
 
