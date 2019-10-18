@@ -15,10 +15,11 @@ Elastic search is used as primary backend of your web application which can be a
 Various UseCases of Elastic Search are:
 
 * Web Application Search Solution
-* Data Visualization
+* Data Visualization and Analytics
 * Log Management
 * Online Database Storage
 * Monitoring System
+* Autocomplete and instant search
 
 
 Elastic Search has following components:
