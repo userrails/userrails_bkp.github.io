@@ -1,3 +1,10 @@
+---
+layout: post
+title:  "Backup and Restore PostgreSQL Database"
+date:   2018-08-27 09:23:58 +0545
+categories: tutorials
+---
+
 ### Backup Database
 ##### pg_dump is the PostgreSQL utility to backup the database.
 

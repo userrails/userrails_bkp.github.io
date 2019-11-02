@@ -1,3 +1,10 @@
+---
+layout: post
+title:  "How to install MongoDB on Ubuntu 18.04?"
+date:   2019-08-29 09:23:58 +0545
+categories: tutorials
+---
+
 ## Install MongoDB Community Edition on Unbuntu 18.04 (Bionic)
 
 Import the MongoDB public GPG Key from https://www.mongodb.org/static/pgp/server-4.2.asc

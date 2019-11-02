@@ -1,3 +1,10 @@
+---
+layout: post
+title:  "How to create Rails application with MongoDB?"
+date:   2019-08-30 09:23:58 +0545
+categories: tutorials
+---
+
 # Setup Rails 5 with mongoid gem
 
 At first we need to install MongoDB in our system, the steps to install MongoDB is descripted in my previous blog. Confirm mongoDB is installed by browsing http://localhost:27017/ and you will get following message:

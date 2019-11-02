@@ -1,4 +1,11 @@
-### When you are at Win machine
+---
+layout: post
+title:  "How to install Ruby on Windows?"
+date:   2018-08-6 04:23:58 +0545
+categories: tutorials
+---
+
+### When you are on Windows machine
 
 ##### You can install BitnamiRubyStack Installers or RubyInstaller. But BitnamiRubyStack always doesnot have latest ruby supported for Win.
 

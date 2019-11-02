@@ -1,3 +1,10 @@
+---
+layout: post
+title:  "Metaprogramming in Ruby"
+date:   2019-09-02 09:23:58 +0545
+categories: tutorials
+---
+
 ## Metaprogramming in Ruby
 
 Metaprogramming is a programming concept which treats other programs as their data and computer programs are written in such a way that is executed at runtime instead of compile time.

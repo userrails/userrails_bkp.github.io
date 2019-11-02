@@ -1,3 +1,10 @@
+---
+layout: post
+title:  "Polymorphism in Ruby"
+date:   2019-08-28 09:23:58 +0545
+categories: tutorials
+---
+
 ### Polymorphism in Ruby
 
 The term polymorphism means having many forms. In Ruby, polymorphism is carried out by using Inheritance. Polymorphism is achieved by using method overriding.

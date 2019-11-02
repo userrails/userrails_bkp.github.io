@@ -1,3 +1,10 @@
+---
+layout: post
+title:  "Git Modify Author and Committer"
+date:   2019-06-13 07:23:58 +0545
+categories: tutorials
+---
+
 # How to change all commits to have the same newly added author and committer?
 
 #### Go to appropriate branch and project directory and run the following command on console.

@@ -1,4 +1,11 @@
-## Notes on various features and functions of Active Record Models
+---
+layout: post
+title:  "Features and functions of Active Record Model"
+date:   2019-08-27 07:12:58 +0545
+categories: tutorials
+---
+
+## Notes on various features and functions of Active Record Model
 
 #### Query Methods
 

@@ -1,3 +1,10 @@
+---
+layout: post
+title:  "Inheritance in Ruby"
+date:   2019-08-28 09:23:58 +0545
+categories: tutorials
+---
+
 ### Inheritance in Ruby
 
 Inheritance is the feature of OOP in which characteristics & behaviours of one class inherits into another class. The class which is inheriting behaviour is called subclass and class it inherits from is called superclass. Inheritance can also be used to remove duplication in your code and helps to achieve DRY "Don't Repeat Yourself" principle.
