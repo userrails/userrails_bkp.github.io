@@ -53,6 +53,8 @@ Rails Web MVC Architecture
 
  ![Web MVC Architecture]({{ "../assets/rails-mvc.jpg" | absolute_url }})
 
+ {% include inarticle-adsense.html %}
+
   [Github]: https://www.github.com
   [ThemeForest]: https://themeforest.net
   [Groupon]: https://groupon.com
