@@ -474,3 +474,227 @@ get the subset of specified selector based on it's argument index or start and s
 ```
 $(selector).slice(start, end)
 ```
+
+# jQuery Effects
+
+jQuery helps us to add various types of visual effects on our webpage.
+
+jQuery effects are listed below:
+
+
+Display Effects     |Sliding Effects   | Fading Effects     |Other Effects
+-------             | ---------------- | ----------         |---------
+show()              |slideUp()         |fadeIn()            |delay()
+hide()              |slideDown()       |fadeOut()           |animate()
+toggle()            |slideToggle()     |fadeToggle()        |fadeTo() 
+                    |                  |fadeTo()            |
+
+Here are the description of some jQuery effect methods: 
+
+#### show()
+
+Display the selected elements
+
+Usage:
+
+```
+$("#btn-hide").click(function() {
+    $("p").hide()
+});
+$("#btn-show").click(function() {
+    $("p").show()
+});
+```
+
+#### hide()
+
+Hide the selected elements
+
+#### toggle()
+
+This function is used to show to hide (toggle) the matched elements
+
+Usage:
+
+```
+    $(btn-toggle).click(function() {
+        $("p").toggle()
+    })
+```
+
+#### slideUp()
+
+This function is used to display the slideup effects which first hide the element and then show the element with sliding effects once it is completed execute the callback function, thus this function is used to slide up an element.
+
+Syntax
+
+```
+$(selector).slideUp(speed,callback);
+```
+
+* speed - valid speed values are slow, normal, fast
+* callback - which is optional parameter and this function is called once the animation is completed.
+
+Usage
+
+```
+$("#btnUp").click(function(){
+    $(".target").slideUp('slow', function(){ 
+        $("#div-id").text('Slide Up Effect');
+    });
+});
+```
+
+#### slideDown()
+
+This function is used to slide down the element.
+
+Syntax
+
+```
+$(selector).slideDown(speed,callback);
+```
+
+Usage
+
+```
+$("#btnDown").click(function(){
+    $(".target").slideDown( 'slow', function(){ 
+        $("#div2-id").text('Slide Down Effect');
+    });
+});
+```
+
+
+#### slideToggle()
+
+slideToggle() method is used to toggle between slideUp() and slideDown() which means if the element if slide down this function helps them slide up and vice versa.
+
+Syntax:
+
+```
+$(selector).slideToggle(speed,callback);
+```
+
+#### fadeIn()
+
+This function is used to show fades in effect from the hidden element to make it visible.
+
+```
+$(selector).fadeIn(speed,easing,callback)
+```
+
+* speed - valid speed values are slow, normal, fast
+* callback - which is optional parameter and this function is called once the animation is completed.
+* easing - This is optional. This feature shows the effect in various speed in various dimension. Various options are:
+    * swing - moves faster in the middle dimension and slower at the start or end.
+    * linear - moves in constant speed.
+
+
+#### fadeOut()
+
+This function is used to show fades out effect from the visible element to make it hidden.
+
+```
+$(selector).fadeOut(speed,easing,callback)
+```
+
+#### fadeToggle()
+
+This method is used to toggle between fadeIn() and fadeOut() which will fades in the element if it is fades out and vice versa.
+
+Syntax
+
+```
+$(selector).fadeOut(speed,easing,callback)
+```
+
+#### fadeTo()
+
+This method is used to show the fading effect of an element partially in or out to make it transparent.
+
+Syntax
+
+```
+$(selector).fadeTo(speed,opacity,callback);
+```
+
+* speed - valid speed values are slow, fast, or milliseconds
+
+* opacity - The values of opacity are between 0 and 1
+0 - fully transparent (hidden)
+1- fully opaque (shown)
+
+* callback - which is optional parameter and this function is called once the animation is completed.
+
+
+#### delay()
+
+The delay() is an inbuilt method in jQuery which is used to set a timer to delay the execution of the next item in the queue.
+
+Syntax
+
+```
+$(selector).delay(speed,queueName)
+```
+
+The paremeters used are explained here:
+
+* speed - The values are milliseconds, "slow", "fast"
+* queueName - The default value if "fx" and you can set the queue name here and is the optional parameter.
+
+Usage
+
+```
+$("#mybtn").click(function() {
+    $("#slow-delay-div").delay("slow").fadeIn();
+    $("#fast-delay-div").delay("fast").fadeIn();
+    $("#ms-div").delay(1000).fadeIn();
+});
+```
+
+#### animate()
+
+This method is used to create custom animations which gives special effects using style properties of the element.
+Specify the selector to get the reference of an element and call animate() to apply animation, this animate() function takes json object for style properties, speed of animation, and other options.
+
+
+Syntax
+
+```
+$(selector).animate({ params },speed, callback);
+$(selector).animate({ stylePropertyName: 'value', duration, easing, callback }, { options })
+```
+
+Usage
+
+```
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js">
+    </script>
+    <script>
+        $(document).ready(function () {
+			$('#animateEx').animate({
+                        height: '50px',
+                        width: '50px'
+                    });
+			});
+    </script>
+	<style>
+        .green {
+            background-color: green;
+            height: 350px;
+            width: 350px;
+        }
+    </style>
+</head>
+<body>
+	<h1>Here is an example of jQuery animate()</h1>
+
+	<div id="animateEx" class="green">
+	</div>
+</body>
+</html>
+```
