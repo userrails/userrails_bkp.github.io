@@ -30,7 +30,9 @@ require("channels")
 
 Gem also generates settings:
 
+```
 config/webpacker.yml
+```
 
 * As like assets pipeline, JavaScript code using Webpacker and webpack automatically compiles in development mode when running rails server.
 * Gem also generates the file `bin/webpack-dev-server` which is used to live reloading the development phase. Inorder to see the live reloading in development mode we need to run the webpack-dev-server with command `./bin/webpack-dev-server` separately.
