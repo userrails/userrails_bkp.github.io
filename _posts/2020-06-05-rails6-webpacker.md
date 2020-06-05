@@ -5,6 +5,7 @@ date:   2020-06-05 01:45:18 +0545
 categories: tutorials
 ---
 
+### Webpacker
 
 * Webpacker is the JavaScript compiler which compiles the JavaScript code.
 * Prior to Rails6, JS code were inside app/assets/javascripts
