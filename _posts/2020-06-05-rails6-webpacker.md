@@ -1,4 +1,11 @@
-# README
+---
+layout: post
+title:  "Webpacker in Rails6"
+date:   2020-06-05 01:45:18 +0545
+categories: tutorials
+---
+
+
 * Webpacker is the JavaScript compiler which compiles the JavaScript code.
 * Prior to Rails6, JS code were inside app/assets/javascripts
 * In Rails6, no app/assets/javascripts and have new dir `app/javascript` to load all the js files which has `channels` & `packs` and all Javascript components like Turbolinks, ActiveStorage, Rails-UJS, ActionCable support Webpacker.
