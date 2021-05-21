@@ -37,3 +37,16 @@ Article.group(:title).having("articles.id>2").count
 SELECT COUNT(*) AS count_all, "articles"."title" AS articles_title FROM "articles" GROUP BY "articles"."title" HAVING (articles.id>2)
 => {"a"=>2}
 ```
+
+#### #group_by is used to group the record and #transform_values can be used to count each grouped records. 
+
+```
+Institution.first.items.includes(:vendor).group_by{|item| item.vendor.name}.transform_values {|values| values.count}
+
+=> {"Vendor 1"=>1,
+ "Vendor 2"=>3,
+ "Vendor 3"=>3,
+ "Vendor 4"=>1,
+ "Vendor 5"=>10
+ }
+```
