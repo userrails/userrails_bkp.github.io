@@ -73,6 +73,26 @@ arr1.object_id = 11617600
 arr2.object_id = 11617600
 ```
 
+Check if there are same elements in both arrays
+
+```
+array1 = [1,2,3]
+array2 = [2,3,1]
+array1.to_set == array2.to_set
+=> true
+
+array1 = [1,2,3,4]
+array2 = [1,2,3]
+array1.to_set == array2.to_set
+=> false
+
+#### In Ruby >= 2.6 we can use array1.intersection(array2) method, if both are same it returns empty array []
+[ 1, 2, 3 ].difference([ 3, 2, 1 ])
+[ 1, 2, 3 ].difference([ 1, 2, 3 ])
+=> []
+```
+
+
 Word array create an array in which each entry is a single word.
 
 '''
