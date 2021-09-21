@@ -233,6 +233,15 @@ str.gsub(/\w+/) {|w| w.capitalize}
 => hell
 ```
 
+#### Remove first and last character if first and last letter satisfied some value
+
+```
+str = "{'a','b','c'}"
+
+str[1..-1] if str.chars.first == '{'
+str[0...-1] if str.chars.last == '}'
+```
+
 #### Change string encodings
 
 ```
